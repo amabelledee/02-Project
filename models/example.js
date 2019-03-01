@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
     contact_email: DataTypes.STRING,
     venue: DataTypes.STRING,
     venueaddress: DataTypes.STRING,
-    eventDate: DataTypes.STRING
+    eventDate: DataTypes.DATE,
+    eventTime: DataTypes.TIME
   });
   return Example;
 };
