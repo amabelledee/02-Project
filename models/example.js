@@ -1,7 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
   var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+    title: DataTypes.STRING,
+    technologies: DataTypes.STRING,
+    budget: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    vendor: DataTypes.STRING,
+    vendoremail: DataTypes.STRING,
+    contact_email: DataTypes.STRING,
+    venue: DataTypes.STRING,
+    venueaddress: DataTypes.STRING,
+    eventDate: DataTypes.STRING
   });
   return Example;
 };
