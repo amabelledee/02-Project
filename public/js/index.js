@@ -1,5 +1,7 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
+var $exampleTitle = $("#example-title");
+var $exampleTech = $("#example-tech");
+var $exampleBudget = $("#example-budget");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
@@ -35,7 +37,9 @@ var refreshExamples = function() {
   API.getExamples().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
-        .text(example.text)
+        .text(example.title)
+        .text(example.tech)
+        .text(example.budget)
         .attr("href", "/example/" + example.id);
 
       var $li = $("<li>")
@@ -65,12 +69,16 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var example = {
-    text: $exampleText.val().trim(),
+    title: $exampleTitle.val().trim(),
+    text: $exampleTech.val().trim(),
+    budget: $exampleBudget.val().trim(),
     description: $exampleDescription.val().trim()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (
+    !(example.title && example.tech && example.budget && example.description)
+  ) {
+    alert("You must enter all inputs!");
     return;
   }
 
@@ -78,7 +86,9 @@ var handleFormSubmit = function(event) {
     refreshExamples();
   });
 
-  $exampleText.val("");
+  $exampleTitle.val("");
+  $exampleTech.val("");
+  $exampleBudget.val("");
   $exampleDescription.val("");
 };
 
