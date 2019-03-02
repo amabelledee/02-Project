@@ -29,6 +29,23 @@ module.exports = function (app) {
     res.render("addevent")
   })
 
+  app.get("/request", function (req, res) {
+    res.render("request")
+  })
+
+  app.get("/thankyou", function (req, res) {
+    res.render("thankyou")
+  })
+
+  app.get("/admin", function (req, res) {
+    db.Request.findAll({}).then(function(dbRequests) {
+      res.render("admin", {
+        requests: dbRequests
+      })
+    })
+    
+  })
+
   app.get("/events", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("events", {
