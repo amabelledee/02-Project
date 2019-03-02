@@ -36,4 +36,20 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+  app.delete("/api/requests/:id", function(req, res) {
+    db.Request.destroy({ where: { id: req.params.id } }).then(function(
+      dbRequest
+    ) {
+      res.json(dbRequest);
+    });
+  });
+
+
+
+
+
+
+
 };
+

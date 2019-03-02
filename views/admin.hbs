@@ -1,4 +1,4 @@
-
+<form action="/api/examples" method="POST">
 <ul id="example-list" class="list-group">
           {{#each requests}}
           
@@ -13,13 +13,13 @@
             <div class="col-md-12">Tech needed: {{this.technologies}}</div>
             <div class="col-md-12">Vendor: {{this.vendor}}</div>
             <div class="col-md-12">Vendor Email: {{this.vendoremail}}</div>
-            <button id="accept" class="btn btn-success float right accept">Accept</button>
-            <button id="deny" class="btn btn-danger float-right delete">Deny</button>
+            <button type="submit" id="accept" class="btn btn-success float right accept">Accept</button>
+            <button id="{{this.id}}" class="btn btn-danger float-right delete">Deny</button>
           </li>
           
           {{/each}}
           </ul>
-
+</form>
 
 
 
