@@ -15,6 +15,13 @@ module.exports = function(app) {
     });
   });
 
+  //new request
+  app.post("/api/requests", function(req, res) {
+    db.Request.create(req.body).then(function(dbRequest) {
+      res.redirect("/thankyou")
+    })
+  })
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(
