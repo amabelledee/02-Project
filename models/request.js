@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
+  var Request = sequelize.define("Request", {
     title: DataTypes.STRING,
     technologies: DataTypes.STRING,
     budget: DataTypes.STRING,
@@ -13,10 +13,6 @@ module.exports = function(sequelize, DataTypes) {
     eventTime: DataTypes.TIME,
 
     
-  })
-  return Example;
- 
-  
-
-
- }
+  });
+  return Request;
+}
