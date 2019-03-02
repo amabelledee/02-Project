@@ -41,22 +41,21 @@ app.get("/", function(req, res) {
 
 //Models
 var models = require("./app/models");
+
 //Routes
 
 var authRoute = require("./app/routes/auth.js")(app, passport);
-app.use(express.static("public"));
+
 //load passport strategies
 
 require("./app/config/passport/passport.js")(passport, models.user);
-require("./app/routes/apiRoutes")(app);
-require("./app/routes/htmlRoutes")(app);
 
 //Sync Database
 
 models.sequelize
   .sync()
   .then(function() {
-    console.log("Connected! Database and Port 5000");
+    console.log("Nice! Database looks fine");
   })
   .catch(function(err) {
     console.log(err, "Something went wrong with the Database Update!");
