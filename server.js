@@ -25,8 +25,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
+// Middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static("./public"));
+
 //For Handlebars
-app.set("views", "./app/views");
+app.set("views", "./views");
 app.engine(
   "hbs",
   exphbs({
@@ -40,15 +45,16 @@ app.get("/", function(req, res) {
 });
 
 //Models
-var models = require("./app/models");
+var models = require("./models");
 
 //Routes
 
-var authRoute = require("./app/routes/auth.js")(app, passport);
-
+var authRoute = require("./routes/auth.js")(app, passport);
+require("./routes/apiRoutes")(app, passport);
+require("./routes/htmlRoutes")(app, passport);
 //load passport strategies
 
-require("./app/config/passport/passport.js")(passport, models.user);
+require("./config/passport/passport.js")(passport, models.user);
 
 //Sync Database
 
