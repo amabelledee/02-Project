@@ -1,0 +1,35 @@
+
+<ul id="example-list" class="list-group">
+          {{#each requests}}
+          
+          <li data-id="{{this.id}}" class="list-group-item">
+            <div class="col-md-12">Event Name: <a href="example/{{this.id}}">{{this.title}}</a></div>
+            <div class="col-md-12">Event Date: {{this.eventDate}}</div>
+            <div class="col-md-12">Event Time: {{this.eventTime}}</div>
+            <div class="col-md-12">Contact Email: {{this.contact_email}}</div>
+            <div class="col-md-12">Event Description: {{this.description}}</div>
+            <div class="col-md-12">Event Venue: {{this.venue}}</div>
+            <div class="col-md-12">Event Location: {{this.venueaddress}}</div>
+            <div class="col-md-12">Tech needed: {{this.technologies}}</div>
+            <div class="col-md-12">Vendor: {{this.vendor}}</div>
+            <div class="col-md-12">Vendor Email: {{this.vendoremail}}</div>
+            <button id="accept" class="btn btn-success float right accept">Accept</button>
+            <button id="deny" class="btn btn-danger float-right delete">Deny</button>
+          </li>
+          
+          {{/each}}
+          </ul>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="/js/admin.js"></script>
+
