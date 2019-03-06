@@ -9,7 +9,7 @@ $("#accept").on("click", function () {
     data: request
   })
 
-
+})
 
 
 
