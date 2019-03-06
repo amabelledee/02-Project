@@ -1,15 +1,15 @@
-import { request } from "http";
+// import { request } from "http";
 
-$("#accept").on("click", function () {
-  console.log("im working")
+// $("#accept").on("click", function () {
+//   console.log("im working")
 
-  $.ajax({
-    url: "/api/examples",
-    type: "POST",
-    data: request
-  })
+//   $.ajax({
+//     url: "/api/examples",
+//     type: "POST",
+//     data: request
+//   })
 
-})
+// })
 
 
 
