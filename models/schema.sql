@@ -13,7 +13,8 @@ title varchar(250) DEFAULT NULL,
  updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  venue text,
  venueaddress varchar(250) DEFAULT NULL,
- eventdate datetime DEFAULT NULL,
+ eventDate varchar(100) DEFAULT NULL,
+eventTime varchar(100) DEFAULT NULL,
  PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

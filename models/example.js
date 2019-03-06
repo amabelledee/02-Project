@@ -9,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
     contact_email: DataTypes.STRING,
     venue: DataTypes.STRING,
     venueaddress: DataTypes.STRING,
-    eventDate: DataTypes.DATE,
-    eventTime: DataTypes.TIME,
+    eventDate: DataTypes.TEXT,
+    eventTime: DataTypes.TEXT,
 
     
   })
