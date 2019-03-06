@@ -7,6 +7,7 @@ var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
+var app = require("express");
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
@@ -35,6 +36,8 @@ Object.keys(db).forEach(function(modelName) {
     db[modelName].associate(db);
   }
 });
+
+app.use(express.static(__dirname+'/public'));
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
