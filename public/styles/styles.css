@@ -52,8 +52,8 @@
 }
 
 .btn {
-  background-color: #3b51c1;
-  border: none;
+  background-color: #3b51c1!important;
+  border: none!important;
   width: 100%;
   margin-top: 10px;
 }
