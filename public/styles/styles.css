@@ -145,3 +145,9 @@ color:#93335B;
 .link{
 color:#93335B;
 }
+
+/* EXAMPLE HBS CSS */
+.eventPage {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
