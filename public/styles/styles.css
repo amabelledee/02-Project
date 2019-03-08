@@ -78,6 +78,38 @@
   
 }
 
+/* Add a gig page */
+.top-gig {
+  text-align: center;
+}
+
+.white-body {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  padding-bottom: 70px;
+}
+
+.title-form {
+  color: white;
+}
+
+.input-back::placeholder {
+  color: white;
+}
+
+.input-back {
+  background: rgba(0, 0, 0, 0)!important;
+  color: white!important;
+  
+}
+
+.add-btn {
+  background-image: linear-gradient(to right, rgb(72, 22, 114) , rgb(189, 9, 165))!important;
+}
+
+
+
+
 /* ELMA */
 /* GLOBAL AND DASHBOARD CSS */
 .list-group-item {
@@ -98,8 +130,9 @@ color: #40271A;
 
 .bg-cover{
   background-image: url('./images/shutterstock_1267516519.jpg');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 html {
