@@ -13,6 +13,7 @@
 
 .op-b {
   position: relative;
+  align-content: center!important;
   top: 50%;
   transform: translateY(-50);
   width: 500px;
