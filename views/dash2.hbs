@@ -1,52 +1,21 @@
-<div id="home">
-    <div class="container">
-        <div class="row">
-            <div class="col-8 offset-2">
-                <h1>{{msg}}</h1>
-                <h2>This is our Home Page!</h2>
-                <form class="clearfix mb-4" action="POST">
+<ul id="example-list" class="list-group">
+    {{#each examples}}
 
-                    <div class="form-group">
-                        <label for="example-title">Event Name</label>
-                        <input type="text" id="example-title" class="form-control" aria-describedby="example-title"
-                            placeholder="Enter Example Title">
-                    </div>
+    <li data-id="{{this.id}}" class="list-group-item">
+        <div class="col-md-12">Event Name: <a href="example/{{this.id}}">{{this.title}}</a></div>
+        <div class="col-md-12">Event Date: {{this.eventDate}}</div>
+        <div class="col-md-12">Event Time: {{this.eventTime}}</div>
+        <div class="col-md-12">Contact Email: {{this.contact_email}}</div>
+        <div class="col-md-12">Event Description: {{this.description}}</div>
+        <div class="col-md-12">Event Venue: {{this.venue}}</div>
+        <div class="col-md-12">Event Location: {{this.venueaddress}}</div>
+        <div class="col-md-12">Tech needed: {{this.technologies}}</div>
+        <div class="col-md-12">Vendor: {{this.vendor}}</div>
+        <div class="col-md-12">Vendor Email: {{this.vendoremail}}</div>
+        <button class="btn btn-danger float-right delete">ｘ</button>
+    </li>
 
-                    <div class="form-group">
-                        <label for="example-tech">Gear Needed</label>
-                        <input type="text" id="example-tech" class="form-control" aria-describedby="example-tech"
-                            placeholder="Enter Gear Needed">
-                    </div>
-                    <div class="form-group">
-                        <label for="example-budget">budget</label>
-                        <input type="text" id="example-budget" class="form-control" aria-describedby="example-budget"
-                            placeholder="Enter Cost of Vendor">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="example-description">Event Description</label>
-                        <textarea class="form-control" id="example-description" aria-describedby="example-description"
-                            placeholder="Enter Example Description"></textarea>
-                    </div>
-                    <button id="submit" class="btn btn-primary float-right">Submit</button>
-                </form>
-                <h3>Examples:</h3>
-                <ul id="example-list" class="list-group">
-                    {{#each examples}}
-                    <li data-id="{{this.id}}" class="list-group-item">
-                        <div class="col-md-12">Event Name: <a href="example/{{this.id}}">{{this.title}}</a></div>
-                        <div class="col-md-12">Event Venue: {{this.venue}}</div>
-                        <div class="col-md-12">Event Location: {{this.venueaddress}}</div>
-                        <div class="col-md-12">Vendor: {{this.vendor}}</div>
-                        <div class="col-md-12">Vendor Email: {{this.vendoremail}}</div>
-                        <button class="btn btn-danger float-right delete">ｘ</button>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
+    {{/each}}
+</ul>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>

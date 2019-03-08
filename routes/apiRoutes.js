@@ -17,6 +17,7 @@ module.exports = function(app) {
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
+      console.log(req.body);
       res.redirect("/events");
     });
   });
@@ -28,12 +29,22 @@ module.exports = function(app) {
     });
   });
 
+  //transfer request to example
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(
       dbExample
     ) {
       res.json(dbExample);
+    });
+  });
+
+  app.delete("/api/requests/:id", function(req, res) {
+    db.Request.destroy({ where: { id: req.params.id } }).then(function(
+      dbRequest
+    ) {
+      res.json(dbRequest);
     });
   });
 };

@@ -1,14 +1,134 @@
-<!DOCTYPE html>
-<html>
+<nav class="navbar navbar-dark navbar-expand-lg navbar-light sticky-top ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mx-auto  mt-lg-0 ">
+            <li class="nav-item active">
+                <!-- <a class="nav-link" href="#Events">Upcoming Events
+                        <span class="sr-only">(current)</span>
+                    </a> -->
+            <li class="nav-item">
+                <a class="nav-link" href="/" tabindex="-1" aria-disabled="true">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Events">Upcoming Events</a>
+            </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Calendar">Calendar Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Vendors">Vendors</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-<head>
-    <title>Passport with Sequelize</title>
-</head>
+<!-- Events Section-->
 
-<body>
-    <h2>Dashboard</h2>
-    <h5>Hurray! you are logged in.</h5>
+<div class="container-fluid mt-3 mb-3">
+    <div class="row card-deck">
+        <div class="col-md-4">
+            <div class="card" id="Events">
+                <h5 class="text-uppercase m-2"><strong>Upcoming Events:</strong></h5>
+                <ul id="example-list" class="list-group">
+                    {{#each examples}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <div class="col-md-12"><a href="example/{{this.id}}" class="link">{{this.title}}</a></div>
+                        <div class="col-md-12"><strong>Event Venue:</strong> {{this.venue}}</div>
+                        <div class="col-md-12"><strong>Event Location:</strong> {{this.venueaddress}}</div>
+                        <div class="col-md-12"><strong>Event Date &amp; Time:</strong> {{this.eventDate}}</div>
+                        <div class="col-md-12"><strong>Vendor:</strong> {{this.vendor}}</div>
+                        <div class="col-md-12"><strong>Vendor Email:</strong> {{this.vendoremail}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
 
-</body>
+        <!-- Calendar Section-->
 
-</html>
+        <div class="col-md-5 mb-5 card" id="Calendar">
+            <div class="row center">
+                <h5 class="text-uppercase text-center m-2">
+                    <strong>Calendar</strong>
+                </h5>
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5r47e14trppa1g8fsr12b4qng4%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FLos_Angeles"
+                    style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+
+        <!-- Vendor Section -->
+
+        <div class="col-md-3">
+            <div class="card" id="Vendors">
+                <!-- <div class="card-body">
+                        <h5 class="card-title">Vendors</h5>
+                    </div> -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <address>
+                            <strong>VENDOR 1</strong>
+                            <br> 1234 Any Street, Suite 900
+                            <br> City, State 12345
+                            <br>
+                            <a href="tel:0-123-456-7890">0-123-456-7890</a>
+                        </address>
+                        <address>
+                            <strong>Full Name</strong>
+                            <br>
+                            <a href="mailto:first.last@example.com">first.last@example.com</a>
+                        </address>
+                    </li>
+                    <li class="list-group-item">
+                        <address>
+                            <strong>VENDOR 2</strong>
+                            <br> 1234 Any Street, Suite 900
+                            <br> City, State 12345
+                            <br>
+                            <a href="tel:0-123-456-7890">0-123-456-7890</a>
+                        </address>
+                        <address>
+                            <strong>Full Name</strong>
+                            <br>
+                            <a href="mailto:first.last@example.com">first.last@example.com</a>
+                        </address>
+                    </li>
+                    <li class="list-group-item">
+                        <address>
+                            <strong>VENDOR 3</strong>
+                            <br> 1234 Any Street, Suite 900
+                            <br> City, State 12345
+                            <br>
+                            <a href="tel:0-123-456-7890">0-123-456-7890</a>
+                        </address>
+                        <address>
+                            <strong>Full Name</strong>
+                            <br>
+                            <a href="mailto:first.last@example.com">first.last@example.com</a>
+                        </address>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../public/js/dashboard.js"></script>

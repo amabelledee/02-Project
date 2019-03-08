@@ -22,6 +22,17 @@ module.exports = function(app) {
     });
   });
 
+  //BELLE - render page to dashboard
+  app.get("/index.html", function(req, res) {
+    db.Example.findAll({ order: [["eventDate", "ASC"]] }).then(function(
+      dbExamples
+    ) {
+      res.render("index.html", {
+        examples: dbExamples
+      });
+    });
+  });
+
   //render page to add gig
   app.get("/add", function(req, res) {
     res.render("addevent");

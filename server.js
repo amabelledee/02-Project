@@ -5,7 +5,7 @@ var session = require("express-session");
 var bodyParser = require("body-parser");
 var env = require("dotenv").load();
 var exphbs = require("express-handlebars");
-
+app.use(express.static("public"));
 //For BodyParser
 app.use(
   bodyParser.urlencoded({
@@ -25,11 +25,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
-// Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static("./public"));
-
 //For Handlebars
 app.set("views", "./views");
 app.engine(
@@ -48,10 +43,10 @@ app.get("/", function(req, res) {
 var models = require("./models");
 
 //Routes
-
+require("./routes/htmlRoutes")(app, passport);
 var authRoute = require("./routes/auth.js")(app, passport);
 require("./routes/apiRoutes")(app, passport);
-require("./routes/htmlRoutes")(app, passport);
+
 //load passport strategies
 
 require("./config/passport/passport.js")(passport, models.user);

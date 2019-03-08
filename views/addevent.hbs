@@ -1,5 +1,5 @@
 <section id="add" class="container">
-    <div class="form-wrap">
+    <dvi class="form-wrap">
         <h1>Add A Gig</h1>
         <p>Your contact email will be shared with registered users to apply to your gig</p>
         {{#each errors}}
@@ -19,8 +19,8 @@
                     value={{eventDate}}>
             </div>
             <div class="input-group">
-                <label for="eventdate">Event Date</label>
-                <input type="test" name="eventtime" id="eventtime" class="input-box" placeholder="Event Date"
+                <label for="eventtime">Event Time</label>
+                <input type="text" name="eventtime" id="eventtime" class="input-box" placeholder="Event Date"
                     value={{eventTime}}>
             </div>
             <div class="input-group">
@@ -67,5 +67,5 @@
 
             <input type="submit" value="Add Gig" class="btn btn-reverse">
         </form>
-    </div>
+        </div>
 </section>

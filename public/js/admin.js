@@ -1,17 +1,21 @@
-$("#accept").on("click", function() {
-  $.ajax({
-    headers: {
-      "Content-Type": "application/json"
-    },
-    type: "POST",
-    url: "/api/examples",
-    data: JSON.stringify(example)
-  });
-});
+// import { request } from "http";
 
-$("#deny").on("click", function(id) {
+// $("#accept").on("click", function () {
+//   console.log("im working")
+
+//   $.ajax({
+//     url: "/api/examples",
+//     type: "POST",
+//     data: request
+//   })
+
+// })
+
+$(".delete").on("click", function(event) {
   $.ajax({
-    url: "/api/requests/" + id,
+    url: "/api/requests/" + event.currentTarget.id,
     type: "DELETE"
+  }).then(function() {
+    location.reload();
   });
 });

@@ -1,0 +1,152 @@
+/* login background CSS */
+/* JOHNSON */
+.bgLogin {
+  background-color: #3b51c1;
+  background-size: cover;
+}
+
+.all {
+  text-align: center;
+  align-content: center !important;
+  margin: auto;
+}
+
+.op-b {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50);
+  width: 500px;
+  /* border-radius: 10px; */
+}
+
+.outside {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.login {
+  align-content: center !important;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  align-self: center;
+  background: rgba(204, 204, 204, 0.5);
+  border-radius: 5px;
+  /* margin: 30px; */
+}
+
+.login h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.login p {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.glyphicon {
+  padding-right: 10px;
+}
+
+.btn {
+  background-color: #3b51c1 !important;
+  border: none !important;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+.logo {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .op-b {
+    width: 100%;
+  }
+
+  .all {
+    left: 25%;
+    top: 18%;
+  }
+}
+
+/* ELMA */
+/* GLOBAL AND DASHBOARD CSS */
+.list-group-item {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  background-color: #93335b;
+}
+.navbar-dark {
+  color: white;
+}
+
+#burgundy {
+  color: #40271a;
+}
+
+.bg-cover {
+  background-image: url("./images/shutterstock_1267516519.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footerCus {
+  position: absolute;
+  clear: both;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0c56a;
+  text-align: center;
+  color: #40271a;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.row-striped:nth-of-type(odd) {
+  background-color: #efefef;
+}
+
+.row-striped:nth-of-type(even) {
+  background-color: #ffffff;
+}
+i {
+  color: #3b51c1;
+}
+.badge-secondary {
+  background-color: #40271a;
+}
+
+h5,
+.text-uppercase {
+  color: #93335b;
+}
+
+.link {
+  color: #93335b;
+}
+
+/* EXAMPLE HBS CSS */
+.eventPage {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}

@@ -1,23 +1,46 @@
 <ul id="example-list" class="list-group">
+
     {{#each requests}}
+    <form action="/api/examples" method="POST">
+        <li data-id="{{this.id}}" class="list-group-item">
 
-    <li data-id="{{this.id}}" class="list-group-item">
-        <div class="col-md-12">Event Name: <a href="example/{{this.id}}">{{this.title}}</a></div>
-        <div class="col-md-12">Event Date: {{this.eventDate}}</div>
-        <div class="col-md-12">Event Time: {{this.eventTime}}</div>
-        <div class="col-md-12">Contact Email: {{this.contact_email}}</div>
-        <div class="col-md-12">Event Description: {{this.description}}</div>
-        <div class="col-md-12">Event Venue: {{this.venue}}</div>
-        <div class="col-md-12">Event Location: {{this.venueaddress}}</div>
-        <div class="col-md-12">Tech needed: {{this.technologies}}</div>
-        <div class="col-md-12">Vendor: {{this.vendor}}</div>
-        <div class="col-md-12">Vendor Email: {{this.vendoremail}}</div>
-        <button id="accept" class="btn btn-success float right accept">Accept</button>
-        <button id="deny" class="btn btn-danger float-right delete">Deny</button>
-    </li>
+            <div class="col-md-12">Event Name: <a href="example/{{this.id}}">{{this.title}}</a> <input type="text"
+                    name="title" id="title" class="input-box" value={{this.title}}></a></div>
 
+            <div class="col-md-12">Event Date: {{this.eventDate}} <input type="text" name="eventDate" id="eventDate"
+                    class="input-box" value={{this.eventDate}}></div>
+            <div class="col-md-12">Event Time: {{this.eventTime}}<input type="text" name="eventYime" id="eventTime"
+                    class="input-box" value={{this.eventTime}}></div>
+            <div class="col-md-12">Contact Email: {{this.contact_email}}<input type="text" name="contact_email"
+                    id="contact_email" class="input-box" value={{this.contact_email}}></div>
+            <div class="col-md-12">Event Description: {{this.description}}<input type="text" name="description"
+                    id="description" class="input-box" value={{this.description}}></div>
+            <div class="col-md-12">Event Venue: {{this.venue}}<input type="text" name="venue" id="venue"
+                    class="input-box" value={{this.venue}}></div>
+            <div class="col-md-12">Event Location: {{this.venueaddress}}<input type="text" name="venueaddress"
+                    id="venueaddress" class="input-box" value={{this.venueaddress}}></div>
+            <div class="col-md-12">Tech needed: {{this.technologies}}<input type="text" name="technologies"
+                    id="technologies" class="input-box" value={{this.technologies}}></div>
+            <div class="col-md-12">Vendor: {{this.vendor}}<input type="text" name="vendor" id="vendor" class="input-box"
+                    value={{this.vendor}}></div>
+            <div class="col-md-12">Vendor Email: {{this.vendoremail}}<input type="text" name="vendoremail"
+                    id="vendoremail" class="input-box" value={{this.vendoremail}}></div>
+            <button type="submit" id="{{this.id}}" class="btn btn-success float right accept">Accept</button>
+            <button id="{{this.id}}" class="btn btn-danger float-right delete">Deny</button>
+
+        </li>
+    </form>
     {{/each}}
 </ul>
+
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

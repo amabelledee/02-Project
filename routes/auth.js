@@ -15,7 +15,7 @@ module.exports = function(app, passport) {
   );
 
   app.get("/dashboard", isLoggedIn, authController.dashboard);
-  app.get("/dash2", isLoggedIn, authController.dash2);
+
   app.get("/logout", authController.logout);
 
   app.post(

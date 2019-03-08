@@ -1,23 +1,28 @@
-<div class="container">
-    <div class="row">
-        <div class="col-8 offset-2">
-            <div class="card mt-4">
-                <div class="card-body">
-                    <h5 class="card-title">Example</h5>
-                    <p>
-                        <strong>ID</strong>: {{example.id}}</p>
-                    <p>
+<body class="bg-cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="card mt-4">
+                    <div class="card-body m-5 eventPage">
+                        <h5 class="card-title text-uppercase">{{example.title}}</h5>
                         <p>
-                            <strong>Event Name</strong>: {{example.vendor}}</p>
+                            <strong>ID</strong>: {{example.id}}</p>
                         <p>
-                            <p>
-                                <strong>Event Name</strong>: {{example.vendoremail}}</p>
-                            <p>
-
-                                <strong>Vendor Name:</strong> {{example.venueaddress}}</p>
-                            <a href="/">← Back To Home</a>
+                            <strong>Vendor Name</strong>: {{example.vendor}}
+                        </p>
+                        <p>
+                            <strong>Vendor Email</strong>: {{example.vendoremail}}
+                        </p>
+                        <p>
+                            <strong>Event Date &amp; Time:</strong> {{example.eventDate}}
+                        </p>
+                        <p>
+                            <strong>Venue Address:</strong> {{example.venueaddress}}
+                        </p>
+                        <a href="/dashboard">← Back To Dasboard</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
