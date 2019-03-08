@@ -8,19 +8,13 @@ module.exports = function(app) {
     });
   });
 
-  // Get all events
-  app.get("/api/upcoming", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
   app.get("/api/vendors", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
 
+  // CHASE PLEASE DOUBLE CHECK THESE ROUTES. THERE ARE INCONSISTENCIES
   app.get("/api/requests", function(req, res) {
     db.Request.findall({}).then(function(dbrequests) {
       res.json(dbRequests)
@@ -42,6 +36,8 @@ module.exports = function(app) {
       res.redirect("/thankyou")
     })
   })
+
+// END CHASE CHECK // 
 
   //transfer request to example
  
