@@ -13,17 +13,20 @@
                         <span class="sr-only">(current)</span>
                     </a> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="/" tabindex="-1" aria-disabled="true">HOME</a>
+                    <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Events">Upcoming Events</a>
+                    <a class="nav-link" href="/upcoming">Upcoming Events</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Calendar">Calendar Events</a>
+                    <a class="nav-link" href="/calendar">Calendar Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Vendors">Vendors</a>
+                    <a class="nav-link" href="/vendors">Vendors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add">ADD EVENT</a>
                 </li>
             </ul>
         </div>
@@ -72,48 +75,16 @@
                         <h5 class="card-title">Vendors</h5>
                     </div> -->
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <address>
-                                <strong>VENDOR 1</strong>
-                                <br> 1234 Any Street, Suite 900
-                                <br> City, State 12345
-                                <br>
-                                <a href="tel:0-123-456-7890">0-123-456-7890</a>
-                            </address>
-                            <address>
-                                <strong>Full Name</strong>
-                                <br>
-                                <a href="mailto:first.last@example.com">first.last@example.com</a>
+                        {{#each examples}}
+                        <li data-id="{{this.id}}" class="list-group-item">
+                            <div><strong>Vendor:</strong> {{this.vendor}}</div>
+                            <div> 1234 Any Street, Suite 900</div>
+                            <div> City, State 12345 </div>
+                            <div><a href="tel:0-123-456-7890">0-123-456-7890</a></div>
+                            <div><a href="mailto:{{this.vendoremail}}">{{this.vendoremail}}</a></div>
                             </address>
                         </li>
-                        <li class="list-group-item">
-                            <address>
-                                <strong>VENDOR 2</strong>
-                                <br> 1234 Any Street, Suite 900
-                                <br> City, State 12345
-                                <br>
-                                <a href="tel:0-123-456-7890">0-123-456-7890</a>
-                            </address>
-                            <address>
-                                <strong>Full Name</strong>
-                                <br>
-                                <a href="mailto:first.last@example.com">first.last@example.com</a>
-                            </address>
-                        </li>
-                        <li class="list-group-item">
-                            <address>
-                                <strong>VENDOR 3</strong>
-                                <br> 1234 Any Street, Suite 900
-                                <br> City, State 12345
-                                <br>
-                                <a href="tel:0-123-456-7890">0-123-456-7890</a>
-                            </address>
-                            <address>
-                                <strong>Full Name</strong>
-                                <br>
-                                <a href="mailto:first.last@example.com">first.last@example.com</a>
-                            </address>
-                        </li>
+                        {{/each}}
                     </ul>
 
                 </div>

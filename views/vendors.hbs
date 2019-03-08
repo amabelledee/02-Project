@@ -1,0 +1,54 @@
+<body class="bg-cover">
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-light sticky-top ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-auto  mt-lg-0 ">
+                <li class="nav-item active">
+                    <!-- <a class="nav-link" href="#Events">Upcoming Events
+                        <span class="sr-only">(current)</span>
+                    </a> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upcoming">Upcoming Events</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calendar">Calendar Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vendors">Vendors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add">ADD EVENT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container m-3">
+        <div class="row">
+            <div>
+                <div class="m-5">
+                    <h5 class="text-uppercase m-2"><strong>VENDORS:</strong></h5>
+                    <ul class="list-group list-group-flush">
+                        {{#each examples}}
+                        <li data-id="{{this.id}}" class="list-group-item">
+                            <div><strong>Vendor:</strong> {{this.vendor}}</div>
+                            <div> 1234 Any Street, Suite 900</div>
+                            <div> City, State 12345 </div>
+                            <div><a href="tel:0-123-456-7890">0-123-456-7890</a></div>
+                            <div><a href="mailto:{{this.vendoremail}}">{{this.vendoremail}}</a></div>
+                            </address>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    <div><a href="/dashboard">← Back To Dasboard</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
