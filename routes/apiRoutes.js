@@ -8,13 +8,6 @@ module.exports = function(app) {
     });
   });
 
-  // Get all events
-  app.get("/api/upcoming", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
   app.get("/api/vendors", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);

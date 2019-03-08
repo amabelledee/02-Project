@@ -23,15 +23,6 @@ module.exports = function (app) {
     });
   });
 
-  // BELLE route for Upcoming
-  app.get("/upcoming", function (req, res) {
-    db.Example.findAll({ order: [['eventDate', 'ASC']] }).then(function (dbExamples) {
-      res.render("upcoming", {
-        examples: dbExamples
-      });
-    });
-  })
-
   //BELLE - render page to dashboard
   app.get("/dashboard", function (req, res) {
     db.Example.findAll({ order: [['eventDate', 'ASC']] }).then(function (dbExamples) {
