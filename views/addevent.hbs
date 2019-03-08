@@ -11,7 +11,7 @@
                         <span class="sr-only">(current)</span>
                     </a> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">HOME</a>
+                    <a class="nav-link" href="/dashboard" tabindex="-1" aria-disabled="true">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/upcoming">Upcoming Events</a>
@@ -24,88 +24,88 @@
                     <a class="nav-link" href="/vendors">Vendors</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/add">ADD EVENT</a>
+                    <a class="nav-link" href="/add">Add Event</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <section id="add">
-        <div class="container-fluid m-5 center">
-            <div class="col">
-                <div class="row">
-                    <h1>Add A Gig</h1>
-                </div>
-                <div class="row">
-                    <p>Your contact email will be shared with registered users to apply to your gig</p>
+    <div class="add-body">
+        <section id="add" class="container col-lg-8 col-lg-offset-2">
+            <div class="white-body">
+                <div class="form-wrap">
+                    <div class="row">
+                        <div class="col-lg-12 top-gig">
+                            <h1 style="color: white">Add A Gig</h1>
+                            <p style="color: white">Your contact email will be shared with registered users to apply to
+                                your gig</p>
+                        </div>
+                    </div>
                     {{#each errors}}
                     <div class="error">
                         <p>{{text}}</p>
                     </div>
                     {{/each}}
-                </div>
-                <div class="row">
                     <form action="/api/examples" method="POST">
-                        <div class="input-group">
-                            <label for="title">Gig Title: </label>
-                            <input type="text" name="title" id="title" class="input-box" placeholder="eg. Wild Goose, Mojo, Endless Dreams, Icon"
-                                maxlength="100" value={{title}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="eventdate">Event Date: </label>
-                            <input type="text" name="eventdate" id="eventdate" class="input-box" placeholder="Event Date"
-                                value={{eventDate}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="eventdate">Event Date: </label>
-                            <input type="test" name="eventtime" id="eventtime" class="input-box" placeholder="Event Date"
-                                value={{eventTime}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="technologies">Gear Needed: </label>
-                            <input type="text" name="technologies" id="technologies" class="input-box" placeholder="eg. DJ, Live Band, Casino"
-                                maxlength="100" value={{technologies}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="budget">Budget (Leave blank for unknown): </label>
-                            <input type="text" name="budget" id="budget" class="input-box" placeholder="eg. 500, 5000, 10000"
-                                value={{budget}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="description">Gig Description: </label>
-                            <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the gig"
-                                rows="10">{{description}}</textarea>
-                        </div>
-                        <div class="input-group">
-                            <label for="vendor">Vendor: </label>
-                            <input type="text" name="vendor" id="vendor" class="input-box" placeholder="vendor name"
-                                value={{vendor}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="vendoremail">Vendor email: </label>
-                            <input tyoe="text" name="vendoremail" id="vendoremail" class="imput-box" placeholder="vendor email"
-                                value={{vendoremail}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="email">Contact Email: </label>
-                            <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter a client email"
-                                value={{contact_email}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="venue">Gig Venue: </label>
-                            <input type="text" name="venue" id="venue" class="input-box" placeholder="Where is the gig"
-                                rows="10" value={{venue}}>
-                        </div>
-                        <div class="input-group">
-                            <label for="venueaddress">Gig Address: </label>
-                            <input type="text" name="venueaddress" id="venueaddress" class="input-box" placeholder="Where is the gig"
-                                rows="10" value={{venueaddress}}>
-                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="title" class="title-form">Gig Title: </label>
+                                <input type="text" name="title" id="title" class="form-control input-back" maxlength="100"
+                                    value={{title}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDate" class="title-form">Event Date: </label>
+                                <input type="text" name="eventDate" id="eventDate" class="form-control input-back"
+                                    value={{eventDate}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventtime" class="title-form">Event Time: </label>
+                                <input type="test" name="eventTime" id="eventTime" class="form-control input-back"
+                                    value={{eventTime}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="technologies" class="title-form">Gear Needed: </label>
+                                <input type="text" name="technologies" id="technologies" class="form-control input-back"
+                                    maxlength="100" value={{technologies}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget" class="title-form">Budget (Leave blank for unknown): </label>
+                                <input type="text" name="budget" id="budget" class="form-control input-back" value={{budget}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="description" class="title-form">Gig Description: </label>
+                                <textarea name="description" id="description" class="form-control input-back" rows="10">{{description}}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="vendor" class="title-form">Vendor: </label>
+                                <input type="text" name="vendor" id="vendor" class="form-control input-back" value={{vendor}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="vendoremail" class="title-form">Vendor email: </label>
+                                <input tyoe="text" name="vendoremail" id="vendoremail" class="form-control input-back"
+                                    value={{vendoremail}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="title-form">Contact Email: </label>
+                                <input type="email" name="contact_email" id="contactemail" class="form-control input-back"
+                                    value={{contact_email}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="venue" class="title-form">Gig Venue: </label>
+                                <input type="text" name="venue" id="venue" class="form-control input-back" rows="10"
+                                    value={{venue}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="venueaddress" class="title-form">Gig Address: </label>
+                                <input type="text" name="venueaddress" id="venueaddress" class="form-control input-back"
+                                    rows="10" value={{venueaddress}}>
+                            </div>
 
 
-                        <input type="submit" value="Add Gig" class="btn btn-reverse">
+                            <input type="submit" value="Add Gig" class="btn btn-primary add-btn btn-reverse">
+                        </form>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
