@@ -26,7 +26,7 @@
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
   },
-  "name": "bookgiggidy",
+  "name": "myappy",
   "description": "Event management app",
   "version": "1.0.0",
   "engines": {
