@@ -15,7 +15,7 @@
     "logging": false
   },
   "production": {
-    "use_env_variable": "q68u8b2buodpme2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "ylexejv1yi4nt1fa",
     "dialect": "mysql"
   }
 }
