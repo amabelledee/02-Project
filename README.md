@@ -42,5 +42,4 @@ Possible area to view current days events with built in chat app to allow each v
 * Adobe XD
 
 ##
-* View on Heroku: ()
-* View live Git link: (https://amabelledee.github.io/02-Project/)
+* View on Heroku: (https://blooming-inlet-79746.herokuapp.com/)
