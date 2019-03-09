@@ -1,7 +1,7 @@
 {
-  "name": "project2",
+  "name": "myapp",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "Event management app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -26,10 +26,19 @@
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
   },
-  "name": "myappy",
-  "description": "Event management app",
-  "version": "1.0.0",
   "engines": {
-    "node": "10.3.0"
-  }
+    "node": "10.12.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amabelledee/02-Project.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/amabelledee/02-Project/issues"
+  },
+  "homepage": "https://github.com/amabelledee/02-Project#readme"
 }
