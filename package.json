@@ -25,5 +25,11 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
+  },
+  "name": "bookgiggidy",
+  "description": "Event management app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.3.0"
   }
 }
